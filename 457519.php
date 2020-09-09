@@ -49,7 +49,7 @@ exit();
 $body .= "Q: Enter your message \n ";
 $body .= "A: '.$temp.' \n ";
 // Send the mail
-mail("pranavsavla2003@gmail.com", "Automated mail from the mail form of test mailer", $body, "noreply@pranav435.github.io");
+mail("pranavsavla2003@gmail.com", "Automated mail from the mail form of test mailer", $body, "noreply@herokuapp.com");
 // Show the success message.
 echo '<doctype html>';
 echo '<head>';
