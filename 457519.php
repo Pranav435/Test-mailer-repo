@@ -9,11 +9,23 @@ $body .= "This is an automatically generated notification from the mail form of 
 if(isset($_POST['0'])) {
 // included. Fantastic!
 $temp = $_POST['0'];
+// some basic validation checks 
+if($temp==="") {
+// Show an error message.
+echo '<h1>there was a problem!</h1>';
+echo 'You missed out a required field! click back in your browser and try again.';
+echo 'The missing field has the label: Enter your email id';
+exit();
+}
 // append to the mail
-$body .= "Q: enter your email \n ";
+$body .= "Q: Enter your email id \n ";
 $body .= "A: '.$temp.' \n ";
 } else {
-$body .= "Q: enter your email, no answer given. \n ";
+// Show an error message.
+echo '<h1>there was a problem!</h1>';
+echo 'You missed out a required field! click back in your browser and try again.';
+echo 'The missing field has the label: Enter your email id';
+exit();
 }
 // Was anythinggiven for the multi line text field?
 if(isset($_POST['1'])) {
@@ -44,7 +56,7 @@ echo '<head>';
 echo '<title>Success!</title>';
 echo '</head>';
 echo '<body>';
-echo 'Success!';
+echo 'Success';
 echo '</body>';
 echo '</html>';
 // End of file
